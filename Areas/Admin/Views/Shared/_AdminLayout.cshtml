@@ -1,0 +1,67 @@
+@{
+    Layout = "_Layout";  // This layout inherits from _Layout.cshtml
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Admin - OpenTable</title>
+    <link href="~/css/styles.css" rel="stylesheet" />
+    <style>
+        /* Styling for the OpenTable logo */
+        .logo a {
+            font-size: 2rem; /* Larger logo font size */
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logo {
+            margin-bottom: 20px; /* Space below the logo */
+        }
+
+        /* Styling for navigation links */
+        nav a {
+            text-decoration: none; /* No underline for links */
+            padding: 10px 15px; /* Add spacing inside the links */
+            margin-right: 10px; /* Adds space between links */
+            font-size: 1.2rem; /* Slightly larger text for links */
+            font-weight: bold; /* Bold text */
+            border-radius: 5px; /* Rounded corners for modern look */
+            
+        }
+
+        /* Spacing between navigation links */
+        nav {
+            display: flex; /* Arrange links horizontally */
+            gap: 15px; /* Uniform spacing between links */
+            align-items: center; /* Align links with the logo */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Logo Section -->
+            <div class="logo">
+                <a href="/">
+                        <img src="/images/LOGO.PNG" alt="OpenTable Logo" style="width: 200px; height: auto;">
+                    </a>
+                </div>
+
+            <!-- Navigation Links -->
+           <!-- <a href="/Admin/Home/Index">Home</a> - -->
+            <a href="/Admin/Metropolis/List">Manage Metropolis</a>
+            <a href="/Admin/Restaurant/List">Manage Restaurant</a>
+            <a href="/Admin/User/List">Manage Users</a>
+            <a href="/Home/Index">View Site</a>
+        </nav>
+    </header>
+
+    <!-- Placeholder for page-specific content -->
+    @RenderBody()
+
+</body>
+</html>
